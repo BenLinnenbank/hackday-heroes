@@ -4,7 +4,7 @@ function Good() {
   return (
     <div>
       <p>
-        If you choose the path of justice, you will help human kind through kindness and humble servitude.
+        If you choose the Path of Justice, you will help human kind through kindness and humble servitude.
       </p>
       <p>
         You will let goodness and honesty guide you.

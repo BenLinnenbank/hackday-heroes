@@ -11,18 +11,19 @@ function Story() {
   if (!userHasChosen) {
     return (
       <div id="background" style={{ backgroundImage: `url(${desktopImage})` }}>
+        <div className="filler"></div>
         <div class="font-weight-bold">
-          <h1>Welcome Hero</h1>
+          <h1>Become a Hero</h1>
           <p>
             The world is in peril! The Corona virus is tormenting humanity.
           </p>
           <p>
-            Climate change is about to bring global catastrophe.
+            Climate change is about to bring a global catastrophe.
           </p>
           <p>
             Now more than ever is the time for a Hero to rise.
           </p>
-          <h3>Choose wisely</h3>
+          <h3>Choose wisely:</h3>
           <button onClick={() => setUsersChoice(true)}>Path of Justice</button>
           <button onClick={() => setUsersChoice(false)}>The Darkside</button>
           {renderGoodOrEvil()}

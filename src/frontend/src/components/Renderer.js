@@ -1,10 +1,10 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Universe from './Universe';
 import Story from './Story'
 
 function Renderer() {
   const [userReady, setUserReady] = useState(false);
-  
+
   if (userReady) {
     return (
       <Story />
@@ -17,7 +17,6 @@ function Renderer() {
 
   function handleClick() {
     setUserReady(true);
-    console.log('hey this is working');
   }
 }
 

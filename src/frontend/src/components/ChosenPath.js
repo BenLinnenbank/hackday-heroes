@@ -23,7 +23,7 @@ function ChosenPath(props) {
         }}>
           <FormGroup>
             <Label>
-              name?
+              what is your name?
             </Label>
             <Input placeholder="name" onChange={(e) => { setHeroName(e.currentTarget.value) }} />
           </FormGroup>
@@ -34,7 +34,7 @@ function ChosenPath(props) {
             <Input placeholder="lastname" onChange={(e) => { setHeroLastName(e.currentTarget.value) }} />
           </FormGroup>
           <FormGroup>
-            <Label for="exampleSelect">gender</Label>
+            <Label for="exampleSelect">What is your gender</Label>
             <Input onChange={(e) => { setGender(e.currentTarget.value) }} type="select" name="select" id="exampleSelect">
               <option>What's your gender</option>
               <option>male</option>
@@ -42,12 +42,12 @@ function ChosenPath(props) {
             </Input>
           </FormGroup>
           <FormGroup>
-            <Label for="exampleSelect">super power</Label>
+            <Label for="exampleSelect">What is your super power</Label>
             <Input onChange={(e) => { setSuperPower(e.currentTarget.value) }} type="select" name="select" id="exampleSelect">
               <option>Pick a power</option>
               <option>Flying</option>
               <option>Super strength</option>
-              <option>Invisibility</option>
+              <option>Extreme stretch</option>
               <option>Element bender</option>
             </Input>
           </FormGroup>
@@ -62,20 +62,20 @@ function ChosenPath(props) {
   if (isFormSent && characterUrl) {
     return (
       <div>
-        <p>
+        <h1>
           Don't waste time {heroName} {heroLastName}, the world needs you!
-        </p>
-        <img src={characterUrl} alt="character" />
+        </h1>
+        <img src={characterUrl} alt="character" width="800px" />
       </div>
     )
   }
 
   function goodOrEvil(path) {
     if (path === true) {
-      return "path of light";
+      return "Path of Justice";
     }
     if (path === false) {
-      return "dark side";
+      return "Darkside";
     }
   }
 
@@ -93,7 +93,7 @@ function ChosenPath(props) {
       body: JSON.stringify(body),
     });
     const image = await result.blob();
-    const url = URL.createObjectURL(image)
+    const url = URL.createObjectURL(image);
     setCharacterUrl(url);
     setIsFormSent(true);
   }
